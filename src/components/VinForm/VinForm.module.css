@@ -30,7 +30,9 @@ input:focus {
   border: 2px solid var(--accent-color);
 }
 
-input.input-error { border-color: #ff3135; }
+input.input-error {
+  border-color: #ff3135;
+}
 
 button {
   padding: var(--button-padding);
@@ -44,7 +46,9 @@ button {
   margin-bottom: 10px;
 }
 
-button:disabled { background: #ccc; }
+button:disabled {
+  background: #ccc;
+}
 
 .history-list {
   display: flex;
@@ -74,5 +78,5 @@ button:disabled { background: #ccc; }
   padding: 15px;
   border-radius: 8px;
   background: #fff;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }

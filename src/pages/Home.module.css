@@ -23,15 +23,30 @@
   margin-top: 20px;
 }
 
-.table th, .table td {
+.table th,
+.table td {
   border: 1px solid #ddd;
   padding: 12px;
   text-align: left;
 }
 
 @media (max-width: 600px) {
-  .table thead { display: none; }
-  .table tr { display: block; margin-bottom: 10px; border: 2px solid #eee; }
-  .table td { display: flex; justify-content: space-between; border: none; border-bottom: 1px solid #eee; }
-  .table td::before { content: attr(data-label); font-weight: bold; }
+  .table thead {
+    display: none;
+  }
+  .table tr {
+    display: block;
+    margin-bottom: 10px;
+    border: 2px solid #eee;
+  }
+  .table td {
+    display: flex;
+    justify-content: space-between;
+    border: none;
+    border-bottom: 1px solid #eee;
+  }
+  .table td::before {
+    content: attr(data-label);
+    font-weight: bold;
+  }
 }

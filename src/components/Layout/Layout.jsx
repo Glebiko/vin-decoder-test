@@ -10,9 +10,7 @@ const Layout = ({ children }) => (
       </nav>
     </header>
 
-    <main className={styles.main}>
-      {children}
-    </main>
+    <main className={styles.main}>{children}</main>
 
     <footer className={styles.footer}>
       <p>© 2024 VIN Decoder SPA. Тестове завдання.</p>

@@ -23,7 +23,7 @@ const Home = () => {
 
     try {
       const response = await fetch(
-        `https://vpic.nhtsa.dot.gov/api/vehicles/decodevin/${vin}?format=json`
+        `https://vpic.nhtsa.dot.gov/api/vehicles/decodevin/${vin}?format=json`,
       );
       const data = await response.json();
 
