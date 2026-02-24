@@ -6,35 +6,38 @@
   font-family: sans-serif;
 }
 
-.vin-form {
+.vinForm {
   margin-bottom: 30px;
 }
 
-.input-group {
+.inputGroup {
   display: flex;
   gap: 10px;
 }
 
-input {
+.input {
   flex: 1;
-  padding: 12px;
-  margin-bottom: 15px;
+  padding: var(--button-padding);
   border: 2px solid #000;
   border-radius: 10px;
   font-size: 16px;
-  width: 90%;
 }
 
-input:focus {
+.input:focus {
   outline: none;
   border: 2px solid var(--accent-color);
 }
 
-input.input-error {
+.inputError {
+  flex: 1;
+  padding: var(--button-padding);
+  margin-bottom: 15px;
+  border-radius: 10px;
+  font-size: 16px;
   border-color: #ff3135;
 }
 
-button {
+.button {
   padding: var(--button-padding);
   background: var(--accent-color);
   color: #fff;
@@ -43,40 +46,8 @@ button {
   cursor: pointer;
   text-transform: uppercase;
   font-size: 0.8rem;
-  margin-bottom: 10px;
 }
 
-button:disabled {
+.button:disabled {
   background: #ccc;
-}
-
-.history-list {
-  display: flex;
-  gap: 10px;
-  margin: 20px 0;
-  list-style: none;
-  padding: 0;
-}
-
-.history-item {
-  background: #f0f2f5;
-  padding: 8px 12px;
-  border-radius: 20px;
-  cursor: pointer;
-  font-size: 14px;
-  border: 1px solid #ccc;
-}
-
-.result-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minman(300px, 1fr));
-  gap: 15px;
-}
-
-.result-card {
-  border: 1px solid #ccc;
-  padding: 15px;
-  border-radius: 8px;
-  background: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }

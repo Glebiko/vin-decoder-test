@@ -1,14 +1,9 @@
 import { useState } from 'react';
-import './VinForm.module.css';
+import styles from './VinForm.module.css';
 
 const VinForm = ({ onSearch, isLoading }) => {
   const [vin, setVin] = useState('');
   const [error, setError] = useState('');
-
-  const validate = (val) => {
-    if (val.length > 17) return 'Максимум 17 символів';
-    return '';
-  };
 
   const handleChange = (e) => {
     const val = e.target.value.toUpperCase();
@@ -36,17 +31,17 @@ const VinForm = ({ onSearch, isLoading }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="vin-form">
-      <div className="input-group">
+    <form onSubmit={handleSubmit} className={styles.vinForm}>
+      <div className={styles.inputGroup}>
         <input
           type="text"
           maxLength={17}
           value={vin}
           onChange={handleChange}
           placeholder="Введіть VIN (17 символів)..."
-          className={error ? 'input-error' : ''}
+          className={error ? styles.inputError : styles.input}
         />
-        <button type="submit" disabled={isLoading}>
+        <button type="submit" disabled={isLoading} className={styles.button}>
           {isLoading ? 'Пошук...' : 'Пошук'}
         </button>
       </div>
