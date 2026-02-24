@@ -1,0 +1,55 @@
+.historySection {
+  margin: 20px 0;
+  padding: 10px 0;
+}
+
+.title {
+  font-size: 0.9rem;
+  color: #000;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.chipsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chip {
+  background-color: #ccc;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #000;
+}
+
+@media (hover: hover) {
+  .chip:hover {
+    background-color: var(--accent-color);
+    color: #fff;
+    border-color: var(--accent-color);
+    box-shadow: 0 2px 5px rgba(0, 123, 255, 0.3);
+  }
+}
+
+@media (hover: none) {
+  .chip:active {
+    background-color: var(--accent-color);
+    color: #fff;
+    border-color: var(--accent-color);
+    box-shadow: 0 2px 5px rgba(0, 123, 255, 0.3);
+  }
+}
+
+@media (max-width: 480px) {
+  .chip {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+}
