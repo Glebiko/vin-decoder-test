@@ -13,13 +13,33 @@
 
 .backLink,
 .notFindedLink {
-  display: inline-block;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   margin-bottom: 20px;
   padding: var(--button-padding);
   color: var(--accent-color);
   text-decoration: none;
   font-weight: 500;
   transition: all 0.2s ease;
+  position: relative;
+}
+
+.backLink::before,
+.notFindedLink::before {
+  position: absolute;
+  content: '<';
+  width: 9px;
+  height: 9px;
+  padding-left: 5px;
+  left: 0;
+  right: 0;
+  bottom: 50%;
+  transform: translateY(-50%);
+}
+
+.backLink {
+  margin-right: 30px;
 }
 
 .title {
@@ -56,18 +76,7 @@
 @media (hover: hover) {
   .backLink:hover,
   .notFindedLink:hover {
-    background-color: var(--accent-color);
-    color: #fff;
-    border-radius: 10px;
-  }
-}
-
-@media (hover: none) {
-  .backLink:active,
-  .notFindedLink:active {
-    background-color: var(--accent-color);
-    color: #fff;
-    border-radius: 10px;
+    text-decoration: underline;
   }
 }
 

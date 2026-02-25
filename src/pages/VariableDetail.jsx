@@ -16,7 +16,7 @@ const VariableDetail = () => {
         const findData = data.Results.find(
           (v) => v.ID.toString() === variableId,
         );
-        setVariable(found);
+        setVariable(findData);
         setLoading(false);
       })
       .catch(() => setLoading(false));
