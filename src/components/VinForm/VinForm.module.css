@@ -1,17 +1,10 @@
-.container {
-  max-width: 1440px;
-  min-width: 420px;
-  margin: 0 auto;
-  padding: 20px;
-  font-family: sans-serif;
-}
-
 .vinForm {
   margin-bottom: 30px;
 }
 
 .inputGroup {
   display: flex;
+  flex-direction: column;
   gap: 10px;
 }
 
@@ -38,6 +31,7 @@
 }
 
 .button {
+  align-self: flex-start;
   padding: var(--button-padding);
   background: var(--accent-color);
   color: #fff;

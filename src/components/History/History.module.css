@@ -39,7 +39,7 @@
 }
 
 @media (hover: none) {
-  .chip:active {
+  .chip:focus {
     background-color: var(--accent-color);
     color: #fff;
     border-color: var(--accent-color);

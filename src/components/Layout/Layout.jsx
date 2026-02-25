@@ -2,20 +2,26 @@ import { Link } from 'react-router-dom';
 import styles from './Layout.module.css';
 
 const Layout = ({ children }) => (
-  <div className={styles.wrapper}>
+  <>
     <header className={styles.header}>
-      <nav className={styles.nav}>
-        <Link to="/">Головна</Link>
-        <Link to="/variables">Змінні</Link>
-      </nav>
+      <div className={styles.container}>
+        <nav className={styles.nav}>
+          <Link to="/">Головна</Link>
+          <Link to="/variables">Змінні</Link>
+        </nav>
+      </div>
     </header>
 
-    <main className={styles.main}>{children}</main>
+    <main className={styles.main}>
+      <div className={styles.container}>{children}</div>
+    </main>
 
     <footer className={styles.footer}>
-      <p>© 2024 VIN Decoder SPA. Тестове завдання.</p>
+      <div className={styles.container}>
+        <p>© 2024 VIN Decoder SPA. Тестове завдання.</p>
+      </div>
     </footer>
-  </div>
+  </>
 );
 
 export default Layout;
